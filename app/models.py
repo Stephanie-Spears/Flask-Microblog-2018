@@ -1,19 +1,43 @@
+from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 from app import db
+from flask_login import UserMixin
+from app import login
+from hashlib import md5
 
 
 # The User class created inherits from db.Model, a base class for all models from Flask-SQLAlchemy.
 # For a one-to-many relationship, a db.relationship field is normally defined on the "one" side, and is used as a convenient way to get access to the "many". So if I have a user stored in u, the expression u.posts will run a database query that returns all the posts written by that user.
 # The first argument to db.relationship indicates the class that represents the "many" side of the relationship. The backref argument defines the name of a field that will be added to the objects of the "many" class that points back at the "one" object. This will add a post.author expression that will return the user given a post. The lazy argument defines how the database query for the relationship will be issued
-class User(db.Model):
+# The lazy = 'dynamic' is special and can be useful if you have many items and always want to apply additional SQL filters to them. Instead of loading the items SQLAlchemy will return another query object which you can further refine before loading the items. Note that this cannot be turned into a different loading strategy when querying so it’s often a good idea to avoid using this in favor of lazy=True. A query object equivalent to a dynamic user.addresses relationship can be created using Address.query.with_parent(user) while still being able to use lazy or eager loading on the relationship itself as necessary.
+
+# Flask-Login requires these items to be added to model:
+#   is_authenticated -> True if the user has valid credentials, False otherwise
+#   is_active -> True if the user's account is active, False otherwise
+#   is_anonymous -> False for regular users, True for a special anonymous user
+#   get_id() -> a method that returns a unique identifier for the user as a string
+# Flask-Login provides a "mixin" class called UserMixin that includes generic implementation for most user model classes.
+class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
+    about_me = db.Column(db.String(140))
+    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
+
+    def avatar(self, size):
+        digest = md5(self.email.lower().encode('utf-8')).hexigest()
+        return 'https://www.gravatar.com/avatar/{}?id=identicon&s={}'.format(digest, size)
 
 
 # When you pass a function as a default, SQLAlchemy will set the field to the value of calling that function (note the missing () after utcnow, so I'm passing the function itself, and not the result of calling it). In general, you will want to work with UTC dates and times in a server application for uniform conversions.
@@ -26,3 +50,10 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+
+# The user loader is registered with Flask-Login with the @login.user_loader decorator. The id that Flask-Login passes to the function as an argument is going to be a string, so databases that use numeric IDs need to convert the string to integer.
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+
