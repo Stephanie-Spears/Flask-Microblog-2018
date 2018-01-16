@@ -49,8 +49,23 @@ class User(UserMixin, db.Model):
 
     def avatar(self, size):
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
-        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(
-            digest, size)
+
+        domain_suffix = [
+            "gmail.com",
+            "yahoo.com",
+            "aol.com",
+            "hotmail.com",
+        ]
+        for domain in domain_suffix:
+            if (self.email).endswith(domain):
+                return 'http://www.gravatar.com/avatar/{}s?d=mm&s={}d'.format(digest, size)
+            else:
+                return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
+        # return 'http://www.gravatar.com/avatar/{}s?d=mm&s={}d'.format(digest, size)
+
+        # has_gravatar = 'http://www.gravatar.com/avatar/{}s?d=mm&s={}d'.format(digest, size)
+        # no_gravatar = 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
+        # return has_gravatar
 
     def follow(self, user):
         if not self.is_following(user):
