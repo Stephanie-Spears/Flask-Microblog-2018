@@ -24,7 +24,10 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     about_me = db.Column(db.String(140))
-    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    last_seen = db.Column(db.DateTime)
+
+    def __repr__(self):
+        return '<User {}>'.format(self.username)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -32,12 +35,16 @@ class User(UserMixin, db.Model):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
-    def __repr__(self):
-        return '<User {}>'.format(self.username)
-
     def avatar(self, size):
-        digest = md5(self.email.lower().encode('utf-8')).hexigest()
-        return 'https://www.gravatar.com/avatar/{}?id=identicon&s={}'.format(digest, size)
+        digest = md5(self.email.lower().encode('utf-8')).hexdigest()
+        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(
+            digest, size)
+
+
+# The user loader is registered with Flask-Login with the @login.user_loader decorator. The id that Flask-Login passes to the function as an argument is going to be a string, so databases that use numeric IDs need to convert the string to integer.
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
 
 # When you pass a function as a default, SQLAlchemy will set the field to the value of calling that function (note the missing () after utcnow, so I'm passing the function itself, and not the result of calling it). In general, you will want to work with UTC dates and times in a server application for uniform conversions.
@@ -52,8 +59,4 @@ class Post(db.Model):
         return '<Post {}>'.format(self.body)
 
 
-# The user loader is registered with Flask-Login with the @login.user_loader decorator. The id that Flask-Login passes to the function as an argument is going to be a string, so databases that use numeric IDs need to convert the string to integer.
-@login.user_loader
-def load_user(id):
-    return User.query.get(int(id))
 
