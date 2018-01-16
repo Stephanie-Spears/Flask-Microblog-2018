@@ -2,11 +2,12 @@ import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
 from flask import Flask
-from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
+from flask_bootstrap import Bootstrap
+from config import Config
 
 
 
@@ -18,6 +19,7 @@ login = LoginManager(app)
 login.login_view = 'login'
 # The 'login' value above is the function (or endpoint) name for the login view. In other words, the name you would use in a url_for() call to get the URL.
 mail = Mail(app)
+bootstrap = Bootstrap(app)
 
 
 if not app.debug:
