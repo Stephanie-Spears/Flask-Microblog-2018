@@ -14,3 +14,5 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('YMAIL_PASSWORD_ONE_ONE')
     ADMINS = [os.environ.get('YMAIL_USERNAME_ONE_ONE')]
 
+    POSTS_PER_PAGE = 5
+
