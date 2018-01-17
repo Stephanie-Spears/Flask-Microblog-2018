@@ -7,6 +7,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 from config import Config
 
 
@@ -20,6 +21,7 @@ login.login_view = 'login'
 # The 'login' value above is the function (or endpoint) name for the login view. In other words, the name you would use in a url_for() call to get the URL.
 mail = Mail(app)
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 
 if not app.debug:
