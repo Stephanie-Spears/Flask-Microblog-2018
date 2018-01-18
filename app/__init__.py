@@ -1,15 +1,16 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
-from flask import Flask
+from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask_babel import Babel, lazy_gettext as _l
+from elasticsearch import Elasticsearch
 from config import Config
-
 
 
 app = Flask(__name__)
@@ -18,10 +19,35 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
+login.login_message = _l('Please log in to access this page.')
 # The 'login' value above is the function (or endpoint) name for the login view. In other words, the name you would use in a url_for() call to get the URL.
 mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+babel = Babel(app)
+
+
+@babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+# We run pybabel to extract the texts we've wrapped with the lazy_gettext function (as '_l') into a separate file:
+# # pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
+
+# The pybabel init command takes the .pot file as input and writes a new language catalog to the directory given in the -d command line option for the language specified in the -l option. By default, Babel expects the translations to be in a translations folder at the same level as the templates, so that's where we'll put them.
+# The command can be executed multiple times with different language codes to add support for other languages.
+# # pybabel init -i messages.pot -d app/translations -l es
+
+# Once the texts have been translated and saved back to the messages.po file there is yet another step to publish these texts. The pybabel compile step just reads the contents of the .po file and writes a compiled version as a .mo (Machine Object) file in the same directory:
+# # pybabel compile -d app/translations
+
+# if you don't feel like messing with your browser configuration you can also fake it by temporarily changing the localeselector function to always request Spanish (file app/views.py):
+# # @babel.localeselector
+# # def get_locale():
+# #    return 'es'  # request.accept_languages.best_match(LANGUAGES.keys())
+
+# To update translation files:
+# # pybabel extract -F babel.cfg -o messages.pot app
+# # pybabel update -i messages.pot -d app/translations
 
 
 if not app.debug:
@@ -49,9 +75,8 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
 
+
 from app import routes, models, errors
-
-
 
 
 # after setting the FLASK_APP env we can run the native Flask command 'flask run'
@@ -64,3 +89,4 @@ from app import routes, models, errors
 #   is_anonymous -> False for regular users, True for a special anonymous user
 #   get_id() -> a method that returns a unique identifier for the user as a string
 # Flask-Login provides a "mixin" class called UserMixin that includes generic implementation for most user model classes.
+

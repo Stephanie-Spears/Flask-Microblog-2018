@@ -15,5 +15,8 @@ class Config(object):
 
     ADMINS = [os.environ.get('GMAIL_USERNAME_ONE_ONE')]
 
+    # Flask-Babel language code: en = English, es = Spanish, ja=Japanese
+    LANGUAGES = ['en', 'es', 'ja', 'it', 'de', 'ru', 'fr']
+
     POSTS_PER_PAGE = 5
 
