@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-18 11:17-0800\n"
+"POT-Creation-Date: 2018-01-18 14:18-0800\n"
 "PO-Revision-Date: 2018-01-18 10:42-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: es\n"
@@ -78,56 +78,64 @@ msgstr "Invio"
 msgid "Say something"
 msgstr "Di qualcosa"
 
-#: app/routes.py:32
+#: app/routes.py:34
 msgid "Your post is up!"
 msgstr "Il tuo post è finito!"
 
-#: app/routes.py:69
+#: app/routes.py:71
 msgid "Invalid username or password"
 msgstr "Username o password non validi"
 
-#: app/routes.py:95
+#: app/routes.py:97
 msgid "Congratulations, you are now a registered user!"
 msgstr "Congratulazioni, ora sei un utente registrato!"
 
-#: app/routes.py:109
+#: app/routes.py:111
 msgid "Check your email for the instructions to reset your password"
 msgstr "Controlla la tua e-mail per le istruzioni per reimpostare la password"
 
-#: app/routes.py:126
+#: app/routes.py:128
 msgid "Your password has been reset."
 msgstr "La tua password è stata resettata."
 
-#: app/routes.py:154
+#: app/routes.py:156
 msgid "Your changes have been saved."
 msgstr "Le modifiche sono state salvate."
 
-#: app/routes.py:159 app/templates/edit_profile.html:5
+#: app/routes.py:161 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Modifica Profilo"
 
-#: app/routes.py:167 app/routes.py:183
+#: app/routes.py:169 app/routes.py:185
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Utente %(username)s non trovato."
 
-#: app/routes.py:170
+#: app/routes.py:172
 msgid "Can't follow yourself, dummy!"
 msgstr "Non posso seguirti, manichino!"
 
-#: app/routes.py:174
+#: app/routes.py:176
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Stai seguendo %(username)s!"
 
-#: app/routes.py:186
+#: app/routes.py:188
 msgid "You cannot unfollow yourself!"
 msgstr "Non puoi disassociarti!"
 
-#: app/routes.py:190
+#: app/routes.py:192
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Non stai seguendo %(username)s."
+
+#: app/translate.py:10
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:17
+msgid "Error: the translation service failed."
+msgstr ""
 
 #: app/templates/404.html:4
 msgid "Not Found"
@@ -149,6 +157,10 @@ msgstr "L'amministratore è stato informato. Ci dispiace per l'inconvenienza!"
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s ha detto %(when)s"
+
+#: app/templates/_post.html:25
+msgid "Translate"
+msgstr ""
 
 #: app/templates/base.html:5
 msgid "Welcome to Microblog"
@@ -173,6 +185,10 @@ msgstr "Profilo"
 #: app/templates/base.html:30
 msgid "Logout"
 msgstr "Logout"
+
+#: app/templates/base.html:67
+msgid "Error: Could not contact server."
+msgstr ""
 
 #: app/templates/index.html:5
 #, python-format
