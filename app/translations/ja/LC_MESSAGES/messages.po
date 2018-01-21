@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 19:58-0800\n"
+"POT-Creation-Date: 2018-01-20 20:13-0800\n"
 "PO-Revision-Date: 2018-01-20 19:54-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: ja\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 
-#: app/__init__.py:18
+#: app/__init__.py:19
 msgid "Please log in to access this page."
 msgstr "登録されている会員はログインして下さい。"
 
@@ -102,37 +102,41 @@ msgstr "送信"
 msgid "Say something"
 msgstr "何を言う"
 
-#: app/main/routes.py:35
+#: app/main/forms.py:32 app/main/routes.py:148
+msgid "Search"
+msgstr ""
+
+#: app/main/routes.py:36
 msgid "Your post is now live!"
 msgstr "あなたのポストは、今生きている!"
 
-#: app/main/routes.py:86
+#: app/main/routes.py:87
 msgid "Your changes have been saved."
 msgstr "変更を保存しました。"
 
-#: app/main/routes.py:91 app/templates/edit_profile.html:5
+#: app/main/routes.py:92 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "プロフィールを編集"
 
-#: app/main/routes.py:100 app/main/routes.py:116
+#: app/main/routes.py:101 app/main/routes.py:117
 #, python-format
 msgid "User %(username)s not found."
 msgstr "ユーザー%(username)sが見つかりません。"
 
-#: app/main/routes.py:103
+#: app/main/routes.py:104
 msgid "You cannot follow yourself!"
 msgstr "あなたはあなた自身に従うことはできません!"
 
-#: app/main/routes.py:107
+#: app/main/routes.py:108
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "%(username)sにフォローします！"
 
-#: app/main/routes.py:119
+#: app/main/routes.py:120
 msgid "You cannot unfollow yourself!"
 msgstr "自分のアンフォローすることはできません！"
 
-#: app/main/routes.py:123
+#: app/main/routes.py:124
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "あなたは%(username)sにフォローしません。"
@@ -174,19 +178,19 @@ msgstr "ホーム"
 msgid "Explore"
 msgstr "探ります"
 
-#: app/templates/base.html:26
+#: app/templates/base.html:33
 msgid "Login"
 msgstr "ログイン"
 
-#: app/templates/base.html:28
+#: app/templates/base.html:35
 msgid "Profile"
 msgstr "プロフィール"
 
-#: app/templates/base.html:29
+#: app/templates/base.html:36
 msgid "Logout"
 msgstr "ログアウト"
 
-#: app/templates/base.html:66
+#: app/templates/base.html:73
 msgid "Error: Could not contact server."
 msgstr "エラー: サーバーに接続できませんでした。"
 
@@ -202,6 +206,18 @@ msgstr "新しい記事"
 #: app/templates/index.html:23 app/templates/user.html:36
 msgid "Older posts"
 msgstr "以前の記事"
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr ""
+
+#: app/templates/search.html:12
+msgid "Previous results"
+msgstr ""
+
+#: app/templates/search.html:17
+msgid "Next results"
+msgstr ""
 
 #: app/templates/user.html:8
 msgid "User"
