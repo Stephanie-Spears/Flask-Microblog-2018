@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:13-0800\n"
+"POT-Creation-Date: 2018-01-20 20:58-0800\n"
 "PO-Revision-Date: 2018-01-18 09:49-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -24,11 +24,11 @@ msgstr "Пожалуйста, войдите, чтобы открыть эту �
 
 #: app/translate.py:10
 msgid "Error: the translation service is not configured."
-msgstr ""
+msgstr "Ошибка: служба перевода не настроена."
 
 #: app/translate.py:18
 msgid "Error: the translation service failed."
-msgstr ""
+msgstr "Ошибка: служба перевода не удалась."
 
 #: app/auth/email.py:8
 msgid "[Microblog] Reset Your Password"
@@ -104,11 +104,11 @@ msgstr "Поговори со мной."
 
 #: app/main/forms.py:32 app/main/routes.py:148
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 #: app/main/routes.py:36
 msgid "Your post is now live!"
-msgstr ""
+msgstr "Ваш пост в прямом эфире!"
 
 #: app/main/routes.py:87
 msgid "Your changes have been saved."
@@ -125,7 +125,7 @@ msgstr "Пользователь %(username)s не найден."
 
 #: app/main/routes.py:104
 msgid "You cannot follow yourself!"
-msgstr ""
+msgstr "Ты не можешь следовать за собой!"
 
 #: app/main/routes.py:108
 #, python-format
@@ -164,7 +164,7 @@ msgstr "%(username)s %(when)s"
 
 #: app/templates/_post.html:25
 msgid "Translate"
-msgstr ""
+msgstr "Переведите"
 
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
@@ -192,7 +192,7 @@ msgstr "Выйти"
 
 #: app/templates/base.html:73
 msgid "Error: Could not contact server."
-msgstr ""
+msgstr "Ошибка: не удалось связаться с сервером."
 
 #: app/templates/index.html:5
 #, python-format
@@ -209,15 +209,15 @@ msgstr "Старые публикации"
 
 #: app/templates/search.html:4
 msgid "Search Results"
-msgstr ""
+msgstr "результат поиска"
 
 #: app/templates/search.html:12
 msgid "Previous results"
-msgstr ""
+msgstr "предыдущий результат"
 
 #: app/templates/search.html:17
 msgid "Next results"
-msgstr ""
+msgstr "следующий результат"
 
 #: app/templates/user.html:8
 msgid "User"

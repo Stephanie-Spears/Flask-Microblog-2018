@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:13-0800\n"
+"POT-Creation-Date: 2018-01-20 20:58-0800\n"
 "PO-Revision-Date: 2018-01-18 10:29-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: es\n"
@@ -104,7 +104,7 @@ msgstr "Dí algo"
 
 #: app/main/forms.py:32 app/main/routes.py:148
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: app/main/routes.py:36
 msgid "Your post is now live!"
@@ -209,15 +209,15 @@ msgstr "Artículos previos"
 
 #: app/templates/search.html:4
 msgid "Search Results"
-msgstr ""
+msgstr "Resultados de la búsqueda"
 
 #: app/templates/search.html:12
 msgid "Previous results"
-msgstr ""
+msgstr "Resultados previos"
 
 #: app/templates/search.html:17
 msgid "Next results"
-msgstr ""
+msgstr "Resultados próximos"
 
 #: app/templates/user.html:8
 msgid "User"

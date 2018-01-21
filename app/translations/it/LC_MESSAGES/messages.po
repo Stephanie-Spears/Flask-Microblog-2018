@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:13-0800\n"
+"POT-Creation-Date: 2018-01-20 20:58-0800\n"
 "PO-Revision-Date: 2018-01-18 10:42-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: es\n"
@@ -24,11 +24,11 @@ msgstr "Accedi per accedere a questa pagina."
 
 #: app/translate.py:10
 msgid "Error: the translation service is not configured."
-msgstr ""
+msgstr "Errore: il servizio di traduzione non è configurato."
 
 #: app/translate.py:18
 msgid "Error: the translation service failed."
-msgstr ""
+msgstr "Errore: il servizio di traduzione non è riuscito."
 
 #: app/auth/email.py:8
 msgid "[Microblog] Reset Your Password"
@@ -104,11 +104,11 @@ msgstr "Di qualcosa"
 
 #: app/main/forms.py:32 app/main/routes.py:148
 msgid "Search"
-msgstr ""
+msgstr "Ricerca"
 
 #: app/main/routes.py:36
 msgid "Your post is now live!"
-msgstr ""
+msgstr "Il tuo post è ora in diretta!"
 
 #: app/main/routes.py:87
 msgid "Your changes have been saved."
@@ -125,7 +125,7 @@ msgstr "Utente %(username)s non trovato."
 
 #: app/main/routes.py:104
 msgid "You cannot follow yourself!"
-msgstr ""
+msgstr "Non puoi seguirti!"
 
 #: app/main/routes.py:108
 #, python-format
@@ -164,7 +164,7 @@ msgstr "%(username)s ha detto %(when)s"
 
 #: app/templates/_post.html:25
 msgid "Translate"
-msgstr ""
+msgstr "Tradurre"
 
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
@@ -192,7 +192,7 @@ msgstr "Logout"
 
 #: app/templates/base.html:73
 msgid "Error: Could not contact server."
-msgstr ""
+msgstr "Errore: impossibile contattare il server."
 
 #: app/templates/index.html:5
 #, python-format
@@ -209,15 +209,15 @@ msgstr "Post precedenti"
 
 #: app/templates/search.html:4
 msgid "Search Results"
-msgstr ""
+msgstr "risultati di ricerca"
 
 #: app/templates/search.html:12
 msgid "Previous results"
-msgstr ""
+msgstr "risultati precedenti"
 
 #: app/templates/search.html:17
 msgid "Next results"
-msgstr ""
+msgstr "risultati successivi"
 
 #: app/templates/user.html:8
 msgid "User"

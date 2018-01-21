@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:13-0800\n"
+"POT-Creation-Date: 2018-01-20 20:58-0800\n"
 "PO-Revision-Date: 2018-01-18 10:46-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: es\n"
@@ -24,11 +24,11 @@ msgstr "Bitte melden Sie sich an, um auf diese Seite zuzugreifen."
 
 #: app/translate.py:10
 msgid "Error: the translation service is not configured."
-msgstr ""
+msgstr "Fehler: Der Übersetzungsdienst ist nicht konfiguriert."
 
 #: app/translate.py:18
 msgid "Error: the translation service failed."
-msgstr ""
+msgstr "Fehler: Der Übersetzungsdienst ist fehlgeschlagen."
 
 #: app/auth/email.py:8
 msgid "[Microblog] Reset Your Password"
@@ -106,11 +106,11 @@ msgstr "Sag etwas"
 
 #: app/main/forms.py:32 app/main/routes.py:148
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #: app/main/routes.py:36
 msgid "Your post is now live!"
-msgstr ""
+msgstr "Dein Beitrag ist jetzt live!"
 
 #: app/main/routes.py:87
 msgid "Your changes have been saved."
@@ -127,7 +127,7 @@ msgstr "Benutze r%(username)s  wurde nicht gefunden."
 
 #: app/main/routes.py:104
 msgid "You cannot follow yourself!"
-msgstr ""
+msgstr "Du kannst dir selbst nicht folgen!"
 
 #: app/main/routes.py:108
 #, python-format
@@ -168,7 +168,7 @@ msgstr "%(username)s  sagte %(when)s"
 
 #: app/templates/_post.html:25
 msgid "Translate"
-msgstr ""
+msgstr "Übersetzen"
 
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
@@ -196,7 +196,7 @@ msgstr "Abmelden"
 
 #: app/templates/base.html:73
 msgid "Error: Could not contact server."
-msgstr ""
+msgstr "Fehler: Der Server konnte nicht kontaktiert werden."
 
 #: app/templates/index.html:5
 #, python-format
@@ -213,15 +213,15 @@ msgstr "Older Posts"
 
 #: app/templates/search.html:4
 msgid "Search Results"
-msgstr ""
+msgstr "Suchergebnisse"
 
 #: app/templates/search.html:12
 msgid "Previous results"
-msgstr ""
+msgstr "Vorherige Ergebnisse"
 
 #: app/templates/search.html:17
 msgid "Next results"
-msgstr ""
+msgstr "Nächste Ergebnisse"
 
 #: app/templates/user.html:8
 msgid "User"

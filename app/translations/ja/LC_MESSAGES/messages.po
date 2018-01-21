@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:13-0800\n"
+"POT-Creation-Date: 2018-01-20 20:58-0800\n"
 "PO-Revision-Date: 2018-01-20 19:54-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: ja\n"
@@ -104,7 +104,7 @@ msgstr "何を言う"
 
 #: app/main/forms.py:32 app/main/routes.py:148
 msgid "Search"
-msgstr ""
+msgstr "サーチ"
 
 #: app/main/routes.py:36
 msgid "Your post is now live!"
@@ -209,15 +209,15 @@ msgstr "以前の記事"
 
 #: app/templates/search.html:4
 msgid "Search Results"
-msgstr ""
+msgstr "検索結果"
 
 #: app/templates/search.html:12
 msgid "Previous results"
-msgstr ""
+msgstr "前の結果"
 
 #: app/templates/search.html:17
 msgid "Next results"
-msgstr ""
+msgstr "次の結果"
 
 #: app/templates/user.html:8
 msgid "User"
