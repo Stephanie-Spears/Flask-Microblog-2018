@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:58-0800\n"
+"POT-Creation-Date: 2018-01-21 02:57-0800\n"
 "PO-Revision-Date: 2018-01-20 19:54-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: ja\n"
@@ -141,22 +141,6 @@ msgstr "自分のアンフォローすることはできません！"
 msgid "You are not following %(username)s."
 msgstr "あなたは%(username)sにフォローしません。"
 
-#: app/templates/404.html:4
-msgid "Not Found"
-msgstr "見つかりませんでした"
-
-#: app/templates/404.html:5 app/templates/500.html:6
-msgid "Back"
-msgstr "戻る"
-
-#: app/templates/500.html:4
-msgid "An unexpected error has occurred"
-msgstr "原因不明のエラーが発生しました"
-
-#: app/templates/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr "管理者が通知されました。不便のために残念!"
-
 #: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -272,6 +256,22 @@ msgstr "パスワードをリセットしてください"
 #: app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "パスワードをリセット"
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr "見つかりませんでした"
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "戻る"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "原因不明のエラーが発生しました"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "管理者が通知されました。不便のために残念!"
 
 #~ msgid "Your post is up!"
 #~ msgstr "投稿はアップです！"

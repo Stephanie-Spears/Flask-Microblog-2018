@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:58-0800\n"
+"POT-Creation-Date: 2018-01-21 02:57-0800\n"
 "PO-Revision-Date: 2018-01-18 09:49-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -141,22 +141,6 @@ msgstr "Вы не можете отписаться от себя!"
 msgid "You are not following %(username)s."
 msgstr "Вы не следуете %(username)s."
 
-#: app/templates/404.html:4
-msgid "Not Found"
-msgstr "Не найдено"
-
-#: app/templates/404.html:5 app/templates/500.html:6
-msgid "Back"
-msgstr "назад"
-
-#: app/templates/500.html:4
-msgid "An unexpected error has occurred"
-msgstr "произошла неожиданная ошибка"
-
-#: app/templates/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr "Администратор был уведомлен. Приносим извинения за неудобства!"
-
 #: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -272,6 +256,22 @@ msgstr "Сбросить пароль"
 #: app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "Сброс пароля"
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr "Не найдено"
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "назад"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "произошла неожиданная ошибка"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "Администратор был уведомлен. Приносим извинения за неудобства!"
 
 #~ msgid "Your post is up!"
 #~ msgstr "Ваш пост вверх!"

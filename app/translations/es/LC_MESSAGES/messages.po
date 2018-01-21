@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-20 20:58-0800\n"
+"POT-Creation-Date: 2018-01-21 02:57-0800\n"
 "PO-Revision-Date: 2018-01-18 10:29-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: es\n"
@@ -141,22 +141,6 @@ msgstr "¡No te puedes dejar de seguir a tí mismo!"
 msgid "You are not following %(username)s."
 msgstr "No estás siguiendo %(username)s."
 
-#: app/templates/404.html:4
-msgid "Not Found"
-msgstr "Extraviado"
-
-#: app/templates/404.html:5 app/templates/500.html:6
-msgid "Back"
-msgstr "Atrás"
-
-#: app/templates/500.html:4
-msgid "An unexpected error has occurred"
-msgstr "Ha ocurrido un error inesperado"
-
-#: app/templates/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr "El administrador ha sido notificado. ¡Lamentamos la inconveniencia!"
-
 #: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -272,6 +256,22 @@ msgstr "Restablecer su contraseña"
 #: app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "Restablecer la contraseña"
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr "Extraviado"
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "Atrás"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Ha ocurrido un error inesperado"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "El administrador ha sido notificado. ¡Lamentamos la inconveniencia!"
 
 #~ msgid "Your post is up!"
 #~ msgstr "¡Es tu post!"
