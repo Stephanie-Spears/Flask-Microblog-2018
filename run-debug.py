@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from app import app
+from app import current_app
 
-app.run(debug=True)
+current_app.run(debug=True)
 
