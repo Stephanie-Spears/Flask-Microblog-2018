@@ -9,7 +9,10 @@ load_dotenv(os.path.join(basedir, '.env'))
 class Config(object):
     SECRET_KEY = os.environ.get('MICROBLOG_SECRET_KEY') or 'SecretKey2018'
     # SQLALCHEMY_DATABASE_URI = os.environ.get('MICROBLOG_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = 'postgres://akqbbzfucsmedc:c36e29300c75620b0273aca70f668fc63f740b9e3991dba5db87d63f18f5b360@ec2-54-225-255-132.compute-1.amazonaws.com:5432/dfjqs7j6trrfra'
+    # SQLALCHEMY_DATABASE_URI = 'postgres://akqbbzfucsmedc:c36e29300c75620b0273aca70f668fc63f740b9e3991dba5db87d63f18f5b360@ec2-54-225-255-132.compute-1.amazonaws.com:5432/dfjqs7j6trrfra'
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
 
