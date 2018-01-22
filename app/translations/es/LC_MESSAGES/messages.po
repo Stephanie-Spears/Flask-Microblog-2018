@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-21 02:57-0800\n"
+"POT-Creation-Date: 2018-01-21 16:35-0800\n"
 "PO-Revision-Date: 2018-01-18 10:29-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: es\n"
@@ -102,7 +102,7 @@ msgstr "Enviar"
 msgid "Say something"
 msgstr "Dí algo"
 
-#: app/main/forms.py:32 app/main/routes.py:148
+#: app/main/forms.py:32 app/main/routes.py:155
 msgid "Search"
 msgstr "Buscar"
 
@@ -110,43 +110,43 @@ msgstr "Buscar"
 msgid "Your post is now live!"
 msgstr "¡Tu artículo ha sido publicado!"
 
-#: app/main/routes.py:87
+#: app/main/routes.py:94
 msgid "Your changes have been saved."
 msgstr "Tus cambios han sido salvados."
 
-#: app/main/routes.py:92 app/templates/edit_profile.html:5
+#: app/main/routes.py:99 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Editar perfil"
 
-#: app/main/routes.py:101 app/main/routes.py:117
+#: app/main/routes.py:108 app/main/routes.py:124
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Usuario %(username)s no encontrado."
 
-#: app/main/routes.py:104
+#: app/main/routes.py:111
 msgid "You cannot follow yourself!"
 msgstr "¡No te puedes seguir a tí mismo!"
 
-#: app/main/routes.py:108
+#: app/main/routes.py:115
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "¡Ahora estás siguiendo a %(username)s!"
 
-#: app/main/routes.py:120
+#: app/main/routes.py:127
 msgid "You cannot unfollow yourself!"
 msgstr "¡No te puedes dejar de seguir a tí mismo!"
 
-#: app/main/routes.py:124
+#: app/main/routes.py:131
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "No estás siguiendo %(username)s."
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s dicho %(when)s"
 
-#: app/templates/_post.html:25
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Traducir"
 
@@ -207,16 +207,16 @@ msgstr "Resultados próximos"
 msgid "User"
 msgstr "Usuario"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:9
 msgid "Last seen on"
 msgstr "Última visita"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:11
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d seguidores"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:11
 #, python-format
 msgid "%(count)d following"
 msgstr "siguiendo a %(count)d"
@@ -225,11 +225,11 @@ msgstr "siguiendo a %(count)d"
 msgid "Edit your profile"
 msgstr "Editar tu perfil"
 
-#: app/templates/user.html:17
+#: app/templates/user.html:17 app/templates/user_popup.html:14
 msgid "Follow"
 msgstr "Seguir"
 
-#: app/templates/user.html:19
+#: app/templates/user.html:19 app/templates/user_popup.html:16
 msgid "Unfollow"
 msgstr "No seguir"
 
