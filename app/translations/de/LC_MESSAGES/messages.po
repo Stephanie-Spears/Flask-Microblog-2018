@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-21 17:48-0800\n"
+"POT-Creation-Date: 2018-01-22 06:53-0800\n"
 "PO-Revision-Date: 2018-01-18 10:46-0800\n"
 "Last-Translator: Stephanie Spears <Stephanie.Spears1@gmail.com>\n"
 "Language: es\n"
@@ -84,9 +84,7 @@ msgstr "Herzlichen Glückwunsch, Sie sind jetzt ein registrierter Benutzer!"
 
 #: app/auth/routes.py:62
 msgid "Check your email for the instructions to reset your password"
-msgstr ""
-"Überprüfen Sie Ihre E-Mail auf die Anweisungen zum Zurücksetzen Ihres "
-"Passworts"
+msgstr "Überprüfen Sie Ihre E-Mail auf die Anweisungen zum Zurücksetzen Ihres Passworts"
 
 #: app/auth/routes.py:79
 msgid "Your password has been reset."
@@ -273,9 +271,7 @@ msgstr "Ein unerwarteter Fehler ist aufgetreten"
 
 #: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr ""
-"Der Administrator wurde benachrichtigt. Entschuldigen Sie die "
-"Unannehmlichkeiten!"
+msgstr "Der Administrator wurde benachrichtigt. Entschuldigen Sie die Unannehmlichkeiten!"
 
 #~ msgid "Your post is up!"
 #~ msgstr "Dein Beitrag ist fertig!"
