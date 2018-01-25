@@ -22,5 +22,6 @@ class Config(object):
     LANGUAGES = ['en', 'es', 'ja', 'it', 'de', 'ru', 'fr']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY1')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    # BONSAI_URL = os.environ.get('BONSAI_URL')
 
     POSTS_PER_PAGE = 10
